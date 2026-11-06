@@ -1,0 +1,21 @@
+# Bloqueia acesso direto aos arquivos JSON pela URL.
+# O PHP continua lendo do disco normalmente (file_get_contents),
+# então o site NÃO quebra: só o acesso via navegador passa a dar 403.
+#
+# Envie este arquivo para: htdocs/data/.htaccess
+
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.json$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+    <FilesMatch "\.json$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+# Impede listagem de diretórios
+Options -Indexes

@@ -1,0 +1,33 @@
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+
+# Logs e temporários
+*.log
+*.tmp
+php-server.log
+
+# Ambiente local
+.env
+.env.*
+
+# Dependências (não usadas hoje, mas evitam lixo futuro)
+node_modules/
+vendor/
+
+# Backups locais
+*.zip
+
+# Dados de tempo de execução.
+# O arquivo vazio {} fica versionado para o site funcionar em qualquer clone.
+# Se começar a receber avaliações reais, descomente a linha abaixo.
+# data/avaliacoes.json
+
+# Materiais de apresentação (ficam só no computador)
+/resumos/
+/CineGuia-Membro1-Cola.pdf
